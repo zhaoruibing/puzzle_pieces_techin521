@@ -1,5 +1,12 @@
 // MIT
 // Code based off https://github.com/BriscoeTech/Arduino-FreeRTOS-SAMD21/blob/master/examples/Basic_RTOS_Example/Basic_RTOS_Example.ino
+
+// Overview of code
+// 2 FreeRTOS tasks running in parallel.
+// TaskBlink controls behaviour of the LEDs depending if the pieces are connected
+// TaskAnalogRead periodically checks if the pieces are connected or not.
+// The tasks communicate via variable "isConnected"
+
 #include <FreeRTOS_SAMD21.h>
 #include <Adafruit_CircuitPlayground.h>
 
